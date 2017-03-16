@@ -1,0 +1,76 @@
+<body>
+{{>loginButtons}}
+{{#if currentUser}}
+	{{>tic_tac_toe}}
+{{/if}}
+</body>
+
+<template name="tic_tac_toe">
+	<form class="game">
+		<div id="board">
+		    <table align="center">
+		      <tr id="row1">
+		      	{{#if board.ax1}}
+		     <td class="square"><input type="hidden" value={{board.ax1}} class="per">
+		     <span class="turned">{{board.ax1}}</span></td>
+	        	{{else}}
+		        <td class="square"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      	{{#if board.ax2}}
+		     <td class="square v"><input type="hidden" value={{board.ax2}} class="per">
+		     <span class="turned">{{board.ax2}}</span></td>
+	        	{{else}}
+		        <td class="square v"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      	{{#if board.ax3}}
+		     <td class="square "><input type="hidden" value={{board.ax3}} class="per">
+		     <span class="turned">{{board.ax3}}</span></td>
+	        	{{else}}
+		        <td class="square"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      </tr>
+		      <tr id="row2">
+		      	{{#if board.bx1}}
+		     <td class="square h"><input type="hidden" value={{board.bx1}} class="per">
+		     <span class="turned">{{board.bx1}}</span></td>
+	        	{{else}}
+		        <td class="square h"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      	{{#if board.bx2}}
+		     <td class="square v h"><input type="hidden" value={{board.bx2}} class="per">
+		     <span class="turned">{{board.bx2}}</span></td>
+	        	{{else}}
+		        <td class="square v h"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      	{{#if board.bx3}}
+		     <td class="square v h"><input type="hidden" value={{board.bx3}} class="per">
+		     <span class="turned">{{board.bx3}}</span></td>
+	        	{{else}}
+		        <td class="square h"><input type="text" name="text" class="per"></td>
+	        	{{/if}}
+		      </tr>
+		      <tr id="row3">
+			      	{{#if board.cx1}}
+			     <td class="square"><input type="hidden" value={{board.cx1}} class="per">
+			     <span class="turned">{{board.cx1}}</span></td>
+		        	{{else}}
+			        <td class="square"><input type="text" name="text" class="per"></td>
+		        	{{/if}}
+			      	{{#if board.cx2}}
+			     <td class="square v"><input type="hidden" value={{board.cx2}} class="per">
+			     <span class="turned">{{board.cx2}}</span></td>
+		        	{{else}}
+			        <td class="square v"><input type="text" name="text" class="per"></td>
+		        	{{/if}}
+			      	{{#if board.cx3}}
+			     <td class="square"><input type="hidden" value={{board.cx3}} class="per">
+			     <span class="turned">{{board.cx3}}</span></td>
+		        	{{else}}
+			        <td class="square"><input type="text" name="text" class="per"></td>
+		        	{{/if}}
+		      </tr>
+		    </table>
+		  </div>
+		{{{result}}}
+	</form>
+</template>
