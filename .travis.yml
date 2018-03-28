@@ -16,4 +16,4 @@ before_script:
   - meteor npm install
  
 script:
-  - meteor npm run 
+  - meteor run 
